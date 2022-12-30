@@ -19,7 +19,7 @@ def get(l,i,url):
 	tree=etree.HTML(res.text)
 	# print(res.text)
 	# print(tree)
-	l[i]['year']=int(tree.xpath(param_year)[0][1:5])
+	l[i]['year']=int(tree.xpath(param_year)[0].strip('()'))
 	l[i]['genre']=tree.xpath(param_genre)
 	l[i]['actors']=tree.xpath(param_actors)
 	# print(l[i]['actors'])
