@@ -19,3 +19,4 @@ for item in raw1:
 	raw2.append(tmp)
 data=pd.DataFrame(raw2,columns=headers)
 print(data)
+data.to_excel("data.xlsx","shuju",index=False)
